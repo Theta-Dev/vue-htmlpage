@@ -8,6 +8,9 @@ The project was generated using the Vue CLI.
 Refer to this StackOverflow thread for information:
 https://stackoverflow.com/questions/58274001/vue-cli-combine-build-output-to-a-single-html-file
 
+Take a look at a preview here:
+https://htmlpreview.github.io/?https://github.com/Theta-Dev/vue-htmlpage/blob/master/test_page.html
+
 ## Project setup
 ```
 npm install
