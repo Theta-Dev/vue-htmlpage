@@ -17,10 +17,16 @@ module.exports = {
   chainWebpack: config => {
     // Images and fonts have to be base64-encoded using url-loader
     config.module.rule('images').use('url-loader').loader('url-loader')
-      .tap(options => Object.assign(options, { limit: undefined }))
+      .tap((options) => Object.assign(options, { limit: undefined }));
+
+    config.module.rule('media').use('url-loader').loader('url-loader')
+      .tap((options) => Object.assign(options, { limit: undefined }));
+
+    config.module.rule('svg').uses.clear();
+    config.module.rule('svg').use('url-loader').loader('url-loader');
 
     config.module.rule('fonts').use('url-loader').loader('url-loader')
-      .tap(options => Object.assign(options, { limit: undefined }))
+      .tap((options) => Object.assign(options, { limit: undefined }));
   },
   configureWebpack: {
     optimization: {
